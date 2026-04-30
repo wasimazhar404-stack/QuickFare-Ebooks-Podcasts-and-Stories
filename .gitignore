@@ -1,0 +1,17 @@
+node_modules
+dist
+.DS_Store
+.bashrc
+.bash_logout
+.profile
+.ssh/
+.config/
+.cache/
+.dotnet/
+.gitconfig
+.ipython/
+.npm/
+.npm-cache/
+.npmrc
+.nuget/
+.Xauthority

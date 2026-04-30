@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&family=Playfair+Display:wght@400;500;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 17% 4%;
+    --foreground: 0 0% 100%;
+    --card: 240 14% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 14% 7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 42 50% 55%;
+    --primary-foreground: 240 17% 4%;
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 68%;
+    --accent: 175 55% 30%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 6 78% 57%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 42 50% 55%;
+    --radius: 0.625rem;
+    --sidebar-background: 240 14% 7%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 42 50% 55%;
+    --sidebar-primary-foreground: 240 17% 4%;
+    --sidebar-accent: 240 10% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 5% 20%;
+    --sidebar-ring: 42 50% 55%;
+  }
+
+  * {
+    @apply border-border;
+    /* Prevent iOS touch callout (context menu) on UI elements */
+    -webkit-touch-callout: none;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-midnight text-white font-inter antialiased;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Prevent overscroll bounce on iOS */
+    overscroll-behavior-y: none;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0A0F;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #9A7B2E;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C9A84C;
+  }
+
+  /* Hide scrollbar for horizontal scroll rows */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  .gold-shimmer {
+    background: linear-gradient(135deg, #9A7B2E 0%, #C9A84C 40%, #E5C76B 60%, #9A7B2E 100%);
+    background-size: 200% 200%;
+    animation: shimmer 3s ease infinite;
+  }
+
+  .hero-vignette {
+    background: radial-gradient(ellipse at center, transparent 0%, #0A0A0F 75%);
+  }
+
+  .card-glow {
+    background: linear-gradient(180deg, rgba(201,168,76,0.15) 0%, transparent 60%);
+  }
+
+  .islamic-bar {
+    background: linear-gradient(90deg, #1E5C45 0%, #1B6B6B 50%, #0A0A0F 100%);
+  }
+
+  .gradient-teal-gold {
+    background: linear-gradient(135deg, #1B6B6B 0%, #C9A84C 100%);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #E5C76B 0%, #C9A84C 50%, #9A7B2E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-nav {
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-card {
+    background: rgba(17, 17, 24, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-neg-15 {
+    transform: rotateY(-15deg);
+  }
+
+  /* ───── PWA / Mobile Performance Utilities ───── */
+
+  /* Safe area insets for notched phones */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-area-left {
+    padding-left: env(safe-area-inset-left);
+  }
+
+  .safe-area-right {
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* Prevent text selection on UI elements */
+  .no-select {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Allow text selection where needed */
+  .allow-select {
+    user-select: text;
+    -webkit-user-select: text;
+    -webkit-touch-callout: default;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Smooth momentum scrolling on iOS */
+  .momentum-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent overscroll bounce */
+  .no-overscroll {
+    overscroll-behavior: none;
+  }
+
+  /* Hardware acceleration for smooth animations */
+  .gpu-accelerate {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

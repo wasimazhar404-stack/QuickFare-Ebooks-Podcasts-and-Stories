@@ -1,0 +1,1 @@
+Generating Digital Lookbook PDF for QuickFare with all 410 covers + metadata. Using small thumbnails to keep file size reasonable (~5-8MB target).
