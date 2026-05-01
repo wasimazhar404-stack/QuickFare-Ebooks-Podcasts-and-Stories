@@ -48,7 +48,7 @@ jobs:
           host: ${{ secrets.HOSTINGER_HOST }}
           username: ${{ secrets.HOSTINGER_USER }}
           port: ${{ secrets.HOSTINGER_SSH_PORT }}
-          key: ${{ secrets.HOSTINGER_SSH_KEY }}
+          password: ${{ secrets.FTP_PASSWORD }}
           source: "dist/"
           target: ${{ secrets.HOSTINGER_REMOTE_PATH }}
           strip_components: 1
