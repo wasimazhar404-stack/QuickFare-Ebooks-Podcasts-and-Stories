@@ -4,7 +4,7 @@ import { defineConfig } from "vite"
 import { inspectAttr } from 'plugin-inspect-react-code'
 
 export default defineConfig({
-  base: './',
+  base: '/quickfare/',
   plugins: [
     inspectAttr(),
     react(),
