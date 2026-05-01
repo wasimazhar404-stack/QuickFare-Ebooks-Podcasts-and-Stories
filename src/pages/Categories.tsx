@@ -330,7 +330,7 @@ function CategoryCard({
 
       {/* Cover image */}
       <motion.img
-        src={`/covers/cover_${padId(config.coverId)}.jpg`}
+        src={`/quickfare/covers/cover_${padId(config.coverId)}.jpg`}
         alt={config.label}
         className="absolute inset-0 w-full h-full object-cover"
         animate={{ scale: hovered ? 1.08 : 1 }}
@@ -415,7 +415,7 @@ function BundleCard({
           {bundle.coverIds.slice(0, 4).map((id, i) => (
             <motion.img
               key={id}
-              src={`/covers/cover_${padId(id)}.jpg`}
+              src={`/quickfare/covers/cover_${padId(id)}.jpg`}
               alt=""
               className="absolute rounded-md shadow-lg"
               style={{

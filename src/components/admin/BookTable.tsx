@@ -459,7 +459,7 @@ export default function BookTable({
                             className="w-10 h-14 object-cover rounded-md border border-white/10"
                             onError={(e) => {
                               (e.target as HTMLImageElement).src =
-                                "/covers/cover_default.jpg";
+                                "/quickfare/covers/cover_default.jpg";
                             }}
                           />
                         ) : (

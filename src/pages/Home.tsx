@@ -32,14 +32,14 @@ const newBooks = uploadedBooks.slice(12, 24);
 const moreBooks = uploadedBooks.slice(24);
 
 const categoryTiles = [
-  { name: "Hajj & Umrah", icon: BookOpen, cover: "/covers/cover_001.jpg", count: 24 },
-  { name: "Quran & Hadith", icon: BookOpen, cover: "/covers/cover_050.jpg", count: 32 },
-  { name: "Islamic Finance", icon: BookOpen, cover: "/covers/cover_200.jpg", count: 18 },
-  { name: "AI & Technology", icon: BookOpen, cover: "/covers/cover_120.jpg", count: 20 },
-  { name: "Travel & Ziyarat", icon: BookOpen, cover: "/covers/cover_004.jpg", count: 15 },
-  { name: "Cooking & Food", icon: BookOpen, cover: "/covers/cover_100.jpg", count: 22 },
-  { name: "Parenting & Family", icon: BookOpen, cover: "/covers/cover_080.jpg", count: 19 },
-  { name: "Self-Defense", icon: BookOpen, cover: "/covers/cover_250.jpg", count: 12 },
+  { name: "Hajj & Umrah", icon: BookOpen, cover: "/quickfare/covers/cover_001.jpg", count: 24 },
+  { name: "Quran & Hadith", icon: BookOpen, cover: "/quickfare/covers/cover_050.jpg", count: 32 },
+  { name: "Islamic Finance", icon: BookOpen, cover: "/quickfare/covers/cover_200.jpg", count: 18 },
+  { name: "AI & Technology", icon: BookOpen, cover: "/quickfare/covers/cover_120.jpg", count: 20 },
+  { name: "Travel & Ziyarat", icon: BookOpen, cover: "/quickfare/covers/cover_004.jpg", count: 15 },
+  { name: "Cooking & Food", icon: BookOpen, cover: "/quickfare/covers/cover_100.jpg", count: 22 },
+  { name: "Parenting & Family", icon: BookOpen, cover: "/quickfare/covers/cover_080.jpg", count: 19 },
+  { name: "Self-Defense", icon: BookOpen, cover: "/quickfare/covers/cover_250.jpg", count: 12 },
 ];
 
 const features = [
@@ -228,7 +228,7 @@ export default function Home() {
             style={{ minHeight: 400 }}
           >
             <img
-              src="/covers/cover_001.jpg"
+              src="/quickfare/covers/cover_001.jpg"
               alt="Featured"
               className="absolute inset-0 w-full h-full object-cover"
               loading="eager"
@@ -285,7 +285,7 @@ export default function Home() {
                     style={{ aspectRatio: "2/3", zIndex: 4 - i }}
                   >
                     <img
-                      src={`/covers/cover_${String(1 + i * 10).padStart(3, "0")}.jpg`}
+                      src={`/quickfare/covers/cover_${String(1 + i * 10).padStart(3, "0")}.jpg`}
                       alt="Collection book"
                       className="w-full h-full object-cover"
                     />

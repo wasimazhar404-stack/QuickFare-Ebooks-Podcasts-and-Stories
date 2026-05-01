@@ -703,7 +703,7 @@ function UploadView() {
         const ext = coverFile.name.split(".").pop() || "jpg";
         const filename = `cover_${Date.now()}.${ext}`;
         // Mock upload: generate local path
-        coverUrl = "/covers/" + filename;
+        coverUrl = "/quickfare/covers/" + filename;
       }
 
       // Offline admin: local state only

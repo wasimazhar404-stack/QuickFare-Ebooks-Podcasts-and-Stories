@@ -74,7 +74,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-midnight text-white pt-16 md:pt-20 pb-12 md:pb-16">
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-[50vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/covers/cover_050.jpg')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('/quickfare/covers/cover_050.jpg')] bg-cover bg-center opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight/20 via-midnight/80 to-midnight" />
         <div className="relative z-10 max-w-container-lg mx-auto px-4 lg:px-16 text-center pt-12 md:pt-16 pb-8 md:pb-12">
           <motion.span
@@ -169,13 +169,13 @@ export default function AboutPage() {
             className="grid grid-cols-2 gap-3 md:gap-4"
           >
             <div className="col-span-2 rounded-xl overflow-hidden aspect-video">
-              <img src="/covers/cover_001.jpg" alt="Hajj" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src="/quickfare/covers/cover_001.jpg" alt="Hajj" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="rounded-xl overflow-hidden aspect-square">
-              <img src="/covers/cover_050.jpg" alt="Quran" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src="/quickfare/covers/cover_050.jpg" alt="Quran" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="rounded-xl overflow-hidden aspect-square">
-              <img src="/covers/cover_400.jpg" alt="Wisdom" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src="/quickfare/covers/cover_400.jpg" alt="Wisdom" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
           </motion.div>
         </div>
@@ -274,7 +274,7 @@ export default function AboutPage() {
 
       {/* ═══════ TESTIMONIALS ═══════ */}
       <section className="relative bg-midnight-100 py-12 md:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/covers/cover_100.jpg')] bg-cover bg-center opacity-[0.04]" />
+        <div className="absolute inset-0 bg-[url('/quickfare/covers/cover_100.jpg')] bg-cover bg-center opacity-[0.04]" />
         <div className="relative z-10 max-w-container-lg mx-auto px-4 lg:px-16 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
