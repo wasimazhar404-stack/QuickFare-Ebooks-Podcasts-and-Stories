@@ -31,8 +31,8 @@ jobs:
           name: dist
           path: dist/
 
-  deploy-ssh:
-    name: Deploy to Hostinger SSH
+  deploy-ftp:
+    name: Deploy to Hostinger FTP
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -42,16 +42,14 @@ jobs:
           name: dist
           path: dist
 
-      - name: Deploy via SSH
-        uses: appleboy/scp-action@master
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.3
         with:
-          host: ${{ secrets.HOSTINGER_HOST }}
+          server: ${{ secrets.HOSTINGER_HOST }}
           username: ${{ secrets.HOSTINGER_USER }}
-          port: ${{ secrets.HOSTINGER_SSH_PORT }}
           password: ${{ secrets.FTP_PASSWORD }}
-          source: "dist/"
-          target: ${{ secrets.HOSTINGER_REMOTE_PATH }}
-          strip_components: 1
+          local-dir: ./dist/
+          server-dir: ${{ secrets.HOSTINGER_REMOTE_PATH }}
 
   deploy-pages:
     name: Deploy to GitHub Pages
